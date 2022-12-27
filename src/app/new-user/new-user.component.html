@@ -1,0 +1,52 @@
+<h2>New User</h2>
+<br />
+
+<fieldset>
+    <div class="container">
+        <div class="row">
+            <form [formGroup] ="userForm" (ngSubmit)="onSubmit()">
+                <div id="user-data"></div>
+                <div class="form-group">
+                    <label for="employeeId">Employee ID:</label>
+                    <input type="text" class="form-control" id="employeeID" formControlName="employeeId" >
+                    <span class="errors" *ngIf="form['employeeId'].touched && form['employeeId'].invalid">Enter a valid ID</span>
+                </div>
+                <div class="form-group">
+                    <label for="employeeName">Employee Name</label>
+                    <input type="text" class="form-control" id="employeeName" formControlName="employeeName">
+                    <span class="errors" *ngIf="form['employeeName'].touched && form['employeeName'].invalid">Enter a valid Name</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">email:</label>
+                    <input type="text" class="form-control" id="email" formControlName="email">
+                    <span class="errors" *ngIf="form['email'].touched && form['email'].invalid">Enter a valid email</span>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">mobile:</label>
+                    <input type="text" class="form-control" id="mobile" formControlName="mobile">
+                    <span class="errors" *ngIf="form['mobile'].touched && form['mobile'].invalid">Enter a valid email</span>
+                </div>
+                <div class="form-group">
+                    <label for="project">project:</label>
+                    <input type="text" class="form-control" id="project" formControlName="project">
+                    <span class="errors" *ngIf="form['project'].touched && form['project'].invalid">Enter a valid project</span>
+                </div>
+                <div class="form-group">
+                    <label for="age">age:</label>
+                    <input type="text" class="form-control" id="age" formControlName="age">
+                    <span class="errors" *ngIf="form['age'].touched && form['age'].invalid">Enter a valid age</span>
+                </div>
+                <div class="form-group">
+                    <label for="joigningDate">joining date:</label>
+                    <input type="text" class="form-control" id="joigningDate" formControlName="joigningDate">
+                    <span class="errors" *ngIf="form['joigningDate'].touched && form['joigningDate'].invalid">Enter a valid joigningDate</span>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" [disabled]="!userForm.valid">Submit</button>
+                    <button class="btn btn-success" routerLink="/manageuser"
+                        routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</fieldset>

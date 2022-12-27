@@ -1,0 +1,43 @@
+<Div class=" container container-sm">
+  <h1 class="text text-primary text-center shadow w-bold fs-1 w-75 mt-5">Welcome On your All allocations Page</h1>
+  <button class="btn btn-outline-primary mt-5" type="submit"  routerLink="/addallocation" routerLinkActive="active-link">New Alloccation</button>
+  <button class="btn btn-outline-secondary mt-5" type="submit"  routerLink="" routerLinkActive="active-link">Export</button> 
+</Div>
+
+<div class="container-fluid">
+  <div class="table shadow table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-success">
+        <tr class="text-center">
+          <th scope="col">id</th>
+          <th scope="col">Allocated To</th>
+          <th scope="col">item</th>
+          <th scope="col">Project</th>
+          <th scope="col">Allocation Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Po No</th>
+          <th scope="col">Po Amt</th>
+          <th scope="col">Description</th>
+          <th scope="col">Life Time</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let item of allocationList">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.allo}}</td>
+          <td> {{item.itemDataList}} </td>
+          <td> {{item.projectDataList}} </td>
+          <td> {{item.start}}</td>
+          <td> {{item.end}}</td>
+          <td> {{item.amount | currency}} </td>
+          <td> {{item.number}} </td>
+          <td> {{item.description}}</td>
+          <td> {{item.Allo}} </td>
+          <button  class="btn btn-primary text-dark mt-2 p-1">update</button>
+          <button  class="btn btn-danger text-dark mt-2 p-1">Delete</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

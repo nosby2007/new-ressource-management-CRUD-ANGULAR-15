@@ -1,0 +1,131 @@
+{
+  "productList": [
+    {
+      "emplName": "jepthe Nkwanmen",
+      "email": "nosby2007@gmail.com",
+      "phone": "971557730791",
+      "department": "Nursing",
+      "category": "Old Employe",
+      "empId": "AMC002",
+      "comment": "ThanK",
+      "date": "2021-03-19T20:00:00.000Z",
+      "id": 1
+    },
+    {
+      "emplName": "OSAS MARTIN",
+      "email": "osasmartin@gmail.com",
+      "phone": "971565534187",
+      "department": "Doctors",
+      "category": "Old Employe",
+      "empId": "AMC001",
+      "comment": "ON MOUD",
+      "date": "2021-05-16T20:00:00.000Z",
+      "id": 2
+    },
+    {
+      "emplName": "Djiad SAN",
+      "email": "djiad@gmail.com",
+      "phone": "971546378673",
+      "department": "Administration",
+      "category": "Old Employe",
+      "empId": "AIC001",
+      "comment": "the boss",
+      "date": "2020-06-10T20:00:00.000Z",
+      "id": 3
+    }
+  ],
+  "allocationList": [
+    {
+      "id": 1,
+      "allo": "jean Marie",
+      "start": "2022-12-26",
+      "end": "2025-12-26",
+      "project": "PCR test Banyas",
+      "item": "phone",
+      "description": "Iphone 14 Prox Max",
+      "Allo": "2022-12-26",
+      "number": 871557730791,
+      "amount": 25000
+    },
+    {
+      "id": 2,
+      "allo": "jepthe",
+      "start": "2022-12-15",
+      "end": "2024-10-26",
+      "projectDataList": "Ecomm",
+      "itemDataList": "Computer",
+      "description": "accer laptop",
+      "Allo": "2022-12-16",
+      "number": 971557730987,
+      "amount": 30000
+    },
+    {
+      "id": 3,
+      "allo": "Andre",
+      "start": "2022-12-13",
+      "end": "2024-10-26",
+      "projectDataList": "Techsupport",
+      "itemDataList": "phone",
+      "description": "iphone 12 Pro",
+      "Allo": "2022-11-29",
+      "number": 23767591533,
+      "amount": 23000
+    },
+    {
+      "id": 4,
+      "allo": "Marc",
+      "start": "2022-12-24",
+      "end": "2024-03-08",
+      "projectDataList": "Techsupport",
+      "itemDataList": "uniform",
+      "description": "Complet securty Uniform",
+      "Allo": "2022-12-13",
+      "number": 23776564325,
+      "amount": 3
+    }
+  ],
+  "itemList": [
+    {
+      "name": "DELL",
+      "type": "Hardware",
+      "description": "computer desktop",
+      "cost": 234,
+      "id": 4
+    },
+    {
+      "name": "Amazon Web service",
+      "type": "software",
+      "description": "Cloud server",
+      "cost": 2450,
+      "id": 5
+    },
+    {
+      "name": "ITEL ANDROID",
+      "type": "PHONE",
+      "description": "Android PHONE",
+      "cost": 123677,
+      "id": 6
+    },
+    {
+      "name": "NOKIA",
+      "type": "PHONE",
+      "description": "ANDROID PHONE",
+      "cost": 123987,
+      "id": 7
+    },
+    {
+      "name": "GOOGLE CORE",
+      "type": "SOFTWARE",
+      "description": "Cloud Server",
+      "cost": 234,
+      "id": 8
+    },
+    {
+      "name": "Unifrom",
+      "type": "Nurse Uniform",
+      "description": "Green Color Uniform",
+      "cost": 123,
+      "id": 9
+    }
+  ]
+}

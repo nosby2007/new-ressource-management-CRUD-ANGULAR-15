@@ -1,0 +1,33 @@
+<Div class="container-sm">
+    <h2 class="text text-primary text-center shadow w-bold fs-1 w-75 mt-5">Manage Item here</h2>
+    <button class="btn btn-outline-primary mt-5" type="submit"  routerLink="/newitem" routerLinkActive="active-link" [routerLinkActiveOptions] = "{exact:true}">New Item</button>
+    
+    <button class="btn btn-outline-secondary mt-5" type="submit"  routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions] = "{exact:true}">Export</button>
+</Div>
+<div class="container">
+    <div class="table shadow table-responsive">
+    <table class="table table-bordered ">
+        <thead class="table-primary">
+            <tr class="fs-5">
+             <th scope="col"> Item ID</th>
+             <th scope="col"> Item Name</th>
+             <th scope="col">Item Type</th>
+             <th scope="col">Item coast</th>
+             <th scope="col">item Description</th>
+             <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody class="table-success text-decoration">
+            <tr *ngFor="let item of itemList">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item.cost}}</td>
+                <td>{{item.description}}</td>
+                <td><button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <h1 mat-dialog-title>Employee Register Form</h1>
+            <div mat-dialog-content>
+                <form [formGroup]="productForm">
+                    <mat-form-field appearence="outline">
+                        <mat-label>Employee Name</mat-label>
+                        <input formControlName="emplName" matInput placeholder="Your Name"/>
+                    </mat-form-field>
+                    <mat-form-field appearence="outline">
+                        <mat-label>Employee email</mat-label>
+                        <input formControlName="email" matInput placeholder="email" />
+                    </mat-form-field>
+                    <mat-form-field appearence="outline">
+                        <mat-label>Employee Tel</mat-label>
+                        <input formControlName="phone" matInput placeholder="phone" />
+                    </mat-form-field>
+                    <mat-form-field appearence="outline">
+                        <mat-label>Departement</mat-label>
+                        <mat-select formControlName="department" placeholder="Category">
+                            <mat-option value="Administration">Admin DEPARTMENT</mat-option>
+                            <mat-option value="Doctors">HCP DEPARTMENT</mat-option>
+                            <mat-option value="Nursing">NURSING DEPARTMENT</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearence="outline">
+                        <mat-label>JOINING DATE</mat-label>
+                        <input formControlName="date" matInput [matDatepicker]="picker" />
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <label for="">
+                        <h1 class="text-primary tw-bold">Employee Category</h1>
+                    </label>
+                    <mat-radio-group formControlName="category" class="exemple-radio-group">
+                        <mat-radio-button class="exemple-radio-button" *ngFor="let fresh of employeeList"
+                            [value]="fresh">
+                            {{fresh}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                    <mat-form-field appearence="outline">
+                        <mat-label>Employe ID </mat-label>
+                        <input formControlName="empId" matInput type="text" placeholder="Your EmpId" />
+                    </mat-form-field>
+                    <mat-form-field appearence="outline">
+                        <mat-label>comment</mat-label>
+                        <textarea formControlName="comment" matInput></textarea>
+                    </mat-form-field>
+                </form>
+                <div mat-dialo-action [align]="'end'">
+                    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+                    <button mat-raised-button class="m-2 btn-outline" color="primary" (click)="addProduct()">{{actionBtn}}</button>
+                </div>
+            </div>

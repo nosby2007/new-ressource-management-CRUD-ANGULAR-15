@@ -1,0 +1,36 @@
+<h1>Add New Item here</h1>
+<fieldset>
+  <h2 class="text-muted">New Item Form</h2>
+  <div class="container-sm">
+    <form [formGroup]="itemForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <span class="errors" *ngIf="f['name'].touched && f['name'].invalid "></span>
+      </div>
+      <div class="mb-3">
+        <label for="type" class="form-label">Type:</label>
+        <input type="text" class="form-control" id="type" formControlName="type">
+        <span class="errors" *ngIf="f['type'].touched && f['type'].invalid "></span>
+      </div>
+      <div class="mb-3">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" formControlName="description">Comment</textarea>
+        <!--<input type="text" class="form-control" id="description" formControlName="description">-->
+        <span class="errors" *ngIf="f['description'].touched && f['description'].invalid "></span>
+      </div>
+      <div class="mb-3">
+        <label for="cost" class="form-label">Cost:</label>
+        <input type="number" class="form-control" id="cost" formControlName="cost">
+        <span class="errors" *ngIf="f['cost'].touched && f['cost'].invalid "></span>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-primary" [disabled]="!itemForm.valid" (click)="addItem()">Submit</button>
+        <button type="submit" class="btn btn-success" routerLink="/manageitem" routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{exact:true}">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</fieldset>

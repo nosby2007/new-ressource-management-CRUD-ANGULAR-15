@@ -1,0 +1,80 @@
+<h2 class="text text-primary w-bold fs-1 w-50 mt-5 center">Add New Allocation</h2>
+
+<fieldset>
+  <h2 class="text-muted">New Allocation Form</h2>
+  <div class="container">
+    <form [formGroup]="allocationForm">
+      <div class="mb-3">
+        <label for="id" class="form-label">ID:</label>
+        <input type="number" class="form-control" id="id"  formControlName="id"> 
+        <span class="errors" *ngIf="f['id'].touched && f['id'].invalid">Enter id</span>
+      </div>
+        <div class="mb-3">
+          <label for="allo" class="form-label">Allocated To:</label>
+          <input type="text" class="form-control" id="allo"   formControlName="allo">
+          <span class="errors" *ngIf="f['allo'].touched && f['allo'].invalid">Enter name</span>
+        </div>
+        
+        <div class="mb-3">
+          <label for="start" class="form-label">Start Date</label>
+          <input type="date" class="form-control" id="end"   formControlName="start">
+          <span class="errors" *ngIf="f['start'].touched && f['start'].invalid">Enter start date </span>
+        </div>
+        <div class="mb-3">
+          <label for="end" class="form-label">End Date:</label>
+          <input type="date" class="form-control" id="end"   formControlName="end">
+          <span class="errors" *ngIf="f['end'].touched && f['end'].invalid">Enter end date</span>
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label">PO Amount:</label>
+          <input type="number" class="form-control" id="amount"   formControlName="amount">
+          <span class="errors" *ngIf="f['amount'].touched && f['amount'].invalid">Enter amount</span>
+        </div>
+        <div class="mb-3">
+          <label for="number" class="form-label">PO Number:</label>
+          <input type="number" class="form-control" id="number"   formControlName="number">
+          <span class="errors" *ngIf="f['number'].touched && f['number'].invalid">Enter your phone Number</span>
+        </div>
+        <div class="mb-3">
+          <label for="itemDataList" class="form-label">Item:</label>
+          <input list="itemlistOptions" class="form-control" id="itemDataList" placeholder="Type to select"   formControlName="itemDataList">
+          <datalist id="itemlistOptions">
+            <option value="Computer">
+            <option value="phone">
+            <option value="uniform">
+            <option value="cars">
+            <option value="scooter">
+          </datalist>
+          <span class="errors" *ngIf="f['itemDataList'].touched && f['itemDataList'].invalid">Enter item</span>
+        </div>
+        <div class="from-floating mb-3">
+          <label for="description">Description:</label>
+          <textarea class="form-control" id="description" formControlName="description"></textarea>
+
+          <!---<input type="text" class="form-control" id="description"   formControlName="description" >--->
+          <span class="errors" *ngIf="f['description'].touched && f['description'].invalid">Enter description</span>
+        </div>
+        <div class="mb-3">
+          <label for="projectDataList" class="form-label">Project:</label>
+          <input  list="datalistOptions" class="form-control" id="projectDataList" placeholder="Type to search"  formControlName="projectDataList" >
+          <datalist id="datalistOptions">
+            <option value="Ecomm">
+            <option value="Spectrum">
+            <option value="Techsupport">
+            <option value="S&D Group">
+          </datalist>
+          <span class="errors" *ngIf="f['projectDataList'].touched && f['projectDataList'].invalid">Enter project</span>
+        </div>
+        <div class="mb-3">
+          <label for="Allo" class="form-label">Allocation Date:</label>
+          <input type="date" class="form-control" id="Allo"   formControlName="Allo">
+          <span class="errors" *ngIf="f['Allo'].touched && f['Allo'].invalid">Enter allocation date</span>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-success" routerLink="/allallocation" routerLinkActive="active-link" [routerLinkActiveOptions] = "{exact:true}">cancel</button>
+          <button type="submit" class="btn btn-primary" (click)="addAllocation()" [disabled]="!allocationForm.valid">Submit</button>
+        </div>
+        
+      </form>
+</div></fieldset>
+
